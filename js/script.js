@@ -1,5 +1,6 @@
-/* 
-   Funcionalidades previstas: ano do rodape, botao "Saiba Mais",
-   consulta de CEP e validacao do formulario de contato.
-   Observacao: a logica sera adicionada na proxima etapa.
-*/
+const btnSaibaMais = document.getElementById("btnSaibaMais");
+const secaoSobre = document.getElementById("sobre");
+
+btnSaibaMais.addEventListener("click", function () {
+  secaoSobre.scrollIntoView({ behavior: "smooth" });
+});
