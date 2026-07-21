@@ -1,5 +1,5 @@
 /* 
-   Funcionalidades previstas: ano do rodapé, botão "Saiba Mais",
-   consulta de CEP e validação do formulário de contato.
-   Observação: a lógica será adicionada na próxima etapa.
+   Funcionalidades previstas: ano do rodape, botao "Saiba Mais",
+   consulta de CEP e validacao do formulario de contato.
+   Observacao: a logica sera adicionada na proxima etapa.
 */
