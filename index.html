@@ -1,31 +1,24 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <!-- Codificação e responsividade -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- Título da aba do navegador -->
   <title>Erick Franco | Desenvolvedor & Engenharia de Computação</title>
   <meta name="description" content="Portfólio de Erick Franco — estudante de Engenharia de Computação (UFRGS), com foco em desenvolvimento de software e inteligência artificial.">
 
-  <!-- Fontes do Google: Playfair Display (títulos) e Inter (texto) -->
+  <!-- Fontes: Playfair Display (titulos) e Inter (texto) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 
-  <!-- Folha de estilos -->
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-  <!-- ==================== CABEÇALHO ==================== -->
+  <!-- Cabecalho -->
   <header>
     <div class="container">
-      <!-- Nome / logo -->
-      <a href="#inicio" class="logo">Erick<span>.dev</span></a>
-
-      <!-- Menu de navegação -->
       <nav aria-label="Navegação principal">
         <a href="#inicio">Início</a>
         <a href="#sobre">Sobre</a>
@@ -37,7 +30,7 @@
 
   <main>
 
-    <!-- ==================== INÍCIO / HERO ==================== -->
+    <!-- Inicio -->
     <section id="inicio" class="hero">
       <div class="container">
         <h1>Erick Gustavo de Almeida Franco</h1>
@@ -45,12 +38,14 @@
           Estudante de Engenharia de Computação na UFRGS, apaixonado por
           desenvolvimento de software e inteligência artificial.
         </p>
-        <!-- Botão de chamada para ação (CTA) -->
-        <button id="btnSaibaMais">Saiba Mais</button>
+        <div class="hero-acoes">
+          <button id="btnSaibaMais" class="btn btn-primario">Saiba Mais</button>
+          <a href="#projetos" class="btn btn-secundario">Ver Projetos</a>
+        </div>
       </div>
     </section>
 
-    <!-- ==================== SOBRE ==================== -->
+    <!-- Sobre -->
     <section id="sobre">
       <div class="container">
         <h2>Sobre mim</h2>
@@ -64,7 +59,6 @@
           expandir esses conhecimentos.
         </p>
 
-        <!-- Lista de tecnologias / habilidades -->
         <h3>Tecnologias & Habilidades</h3>
         <ul class="tecnologias">
           <li>C</li>
@@ -79,14 +73,13 @@
       </div>
     </section>
 
-    <!-- ==================== PROJETOS ==================== -->
+    <!-- Projetos -->
     <section id="projetos">
       <div class="container">
         <h2>Projetos</h2>
 
         <div class="grade-projetos">
 
-          <!-- Projeto 1 -->
           <article class="card">
             <h3>Pipelines de Dados para IA</h3>
             <p>
@@ -97,7 +90,6 @@
             <p class="tags">Python · LLMs · Machine Learning</p>
           </article>
 
-          <!-- Projeto 2 -->
           <article class="card">
             <h3>Landing Page — Portfólio</h3>
             <p>
@@ -108,7 +100,6 @@
             <p class="tags">HTML · CSS · JavaScript</p>
           </article>
 
-          <!-- Projeto 3 -->
           <article class="card">
             <h3>Algoritmos & Estrutura de Dados</h3>
             <p>
@@ -123,43 +114,38 @@
       </div>
     </section>
 
-    <!-- ==================== CONTATO ==================== -->
+    <!-- Contato -->
     <section id="contato">
       <div class="container">
         <h2>Contato</h2>
         <p>Quer conversar sobre uma oportunidade ou projeto? Envie uma mensagem.</p>
 
-        <!-- Formulário de contato -->
         <form id="formContato" novalidate>
 
-          <!-- Nome -->
           <label for="nome">Nome</label>
           <input type="text" id="nome" name="nome" placeholder="Seu nome" required>
 
-          <!-- E-mail -->
           <label for="email">E-mail</label>
           <input type="email" id="email" name="email" placeholder="voce@exemplo.com" required>
 
-          <!-- CEP (com status da consulta logo abaixo) -->
           <label for="cep">CEP</label>
           <input type="text" id="cep" name="cep" placeholder="00000-000" inputmode="numeric" maxlength="9">
+          <!-- Status da consulta de CEP -->
           <small id="cepStatus"></small>
 
-          <!-- Cidade e Endereço: preenchidos automaticamente pelo CEP -->
+          <!-- Cidade e endereco sao preenchidos pela consulta de CEP -->
           <label for="cidade">Cidade</label>
           <input type="text" id="cidade" name="cidade" placeholder="Preenchido pelo CEP" readonly>
 
           <label for="rua">Endereço</label>
           <input type="text" id="rua" name="rua" placeholder="Preenchido pelo CEP" readonly>
 
-          <!-- Mensagem -->
           <label for="mensagem">Mensagem</label>
           <textarea id="mensagem" name="mensagem" rows="5" placeholder="Escreva sua mensagem..." required></textarea>
 
-          <!-- Botão de envio -->
-          <button type="submit">Enviar mensagem</button>
+          <button type="submit" class="btn btn-primario">Enviar mensagem</button>
 
-          <!-- Feedback de envio (preenchido pelo JavaScript) -->
+          <!-- Resultado do envio, preenchido pelo JavaScript -->
           <p id="formFeedback"></p>
         </form>
       </div>
@@ -167,21 +153,19 @@
 
   </main>
 
-  <!-- ==================== RODAPÉ ==================== -->
+  <!-- Rodape -->
   <footer>
     <div class="container">
-      <!-- Links de contato e redes -->
       <p class="redes">
         <a href="https://github.com/ErickFrancoo" target="_blank" rel="noopener">GitHub</a>
         <a href="https://www.linkedin.com/in/erick-franco-b8b087379/" target="_blank" rel="noopener">LinkedIn</a>
         <a href="mailto:francoerick0202@gmail.com">E-mail</a>
       </p>
-      <!-- Ano preenchido dinamicamente pelo JavaScript -->
+      <!-- O ano e preenchido pelo JavaScript -->
       <p>&copy; <span id="ano"></span> Erick Franco — Todos os direitos reservados.</p>
     </div>
   </footer>
 
-  <!-- Script principal (ao final do body para melhor performance) -->
   <script src="js/script.js"></script>
 </body>
 </html>
